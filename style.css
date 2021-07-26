@@ -3,9 +3,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Spartan;
 }
 body{
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-color: #f2f2f2;
 
 }
@@ -97,11 +98,34 @@ video{
     height: 1000px;
 }
 /* nosotros */
+#nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1000px;
+}
 .fondo{
     background-color: #f2f2f2;
-    display: block;
+    /* display: flex; */
     width: 100%;
-    height: 800px;
+    height: 1000px;
     position: absolute;
     z-index: -1;
+}
+.logo-nosotros{
+    width: 500px;
+    height: 500px;
+}
+.box-text-nosotros{
+    width: 1000px;
+    background-color: #214DA6;
+    padding: 25px;
+    border-radius: 30px;
+}
+.box-text-nosotros h2{
+    color: #f2f2f2;
+    margin-top: 25px;
+    font-weight: 500;
 }
