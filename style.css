@@ -6,9 +6,7 @@
     font-family: Spartan;
 }
 body{
-    /* overflow-x: hidden; */
     background-color: #f2f2f2;
-
 }
 /* cabecera */
 header{
@@ -48,35 +46,25 @@ header{
     border-radius: 50px;
     font-weight: 600;
 }
+
+.movil-menu{
+    display: none;
+}
 /* Inicio */
 #inicio{
     display: flex;
     width: 100%;
     height: 1000px;
     background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.3) 68%, #f2f2f2);
+    overflow: hidden;
 }
-/* .overlay{
-    width: 100%;
-    height: 94.2%;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-} */
 video{
     position: relative;
     z-index: -1;
     width: 100%;
     transform: scale(1.6);
-
-    /* position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: -1; */
 }
 #inicio .box-text h1, #inicio .box-text h2{
-    font-family: Spartan;
     color: #F2F2F2;
 }
 .box-text h1{
@@ -128,4 +116,12 @@ video{
     color: #f2f2f2;
     margin-top: 25px;
     font-weight: 500;
+}
+@media screen and (max-width: 650px){
+    .menu{
+        display: none;
+    }
+    .box-text-nosotros{
+        display: none;
+    }
 }
