@@ -9,83 +9,108 @@ body{
     background-color: #f2f2f2;
 }
 /* cabecera */
-header{
-    display: flex;
+.icone-menu{
+    margin: 40px 50px;
+    position: fixed;
+    z-index: 10;
     background-color: #214DA6;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;    
-    position: relative;
-}
-.logo{
-    position: relative;
-    z-index: 1;
-    width: 120px;
-    padding: 10px 0 10px 0;
-    color: #F2F2F2;
-}
-.menu{
-    display: flex;
-}
-.menu .contenido{
-    margin-left: 0;
-}
-.menu a{
-    font-family: Spartan;
-    font-weight: 400;
-    font-size: 24px;
     padding: 10px;
-    margin-left: 50px;
-    text-decoration: none;
-    color: #F2F2F2;
-    /* transition: all 0.3s; */
-}
-.menu a:hover{
-    background-color: #F2F2F2;
-    color: #F2AEB4;
     border-radius: 50px;
-    font-weight: 600;
 }
-
-.movil-menu{
-    display: none;
+.icone-menu img{
+    vertical-align: top;
+    width: 40px;
+    cursor: pointer;
 }
+.cont-menu{
+    background-color: #214DA6;
+    box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+}
+/* estilis para agragar en javascript */
+.active{
+    transform: translate(-600px);
+}
+.opacity{
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .5s ease;
+}
+/* estilos para el listado del menu */
+.cont-menu ul{
+    padding: 100px 0px 20px 0px;
+    list-style: none;
+}
+.cont-menu ul li a{
+    color: #fff;
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+.cont-menu ul li a:hover{
+    background-color: rgb(228, 228,228);
+    color: rgb(42, 42, 42);
+}   
 /* Inicio */
+#box-video{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: fleX;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px;
+}
+#box-video video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
 #inicio{
     display: flex;
     width: 100%;
-    height: 1000px;
+    height: 100vh;
     background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.3) 68%, #f2f2f2);
     overflow: hidden;
+    position: absolute;
+    top: 0;
 }
-video{
-    position: relative;
-    z-index: -1;
-    width: 100%;
-    transform: scale(1.6);
-}
-#inicio .box-text h1, #inicio .box-text h2{
+#inicio #box-text h1, #inicio #box-text h2{
     color: #F2F2F2;
 }
-.box-text h1{
+#box-text h1{
     font-size: 90px;
     text-shadow: 1px 1px 30px rgb(255, 255, 255, 0.7);
 }
-.box-text h2{
+#box-text h2{
     font-size: 28px;
     font-weight: 200;
     text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+    z-index: 1;
 }
-.box-text{
-    display: flex;
+#box-text{
     position: absolute;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 1000px;
+    height: 100vh;
+    /* z-index: 1; */
 }
-/* nosotros */
+ /* nosotros  */
 #nosotros {
     display: flex;
     flex-direction: column;
@@ -94,14 +119,14 @@ video{
     width: 100%;
     height: 1000px;
 }
-.fondo{
+/* .fondo{
     background-color: #f2f2f2;
-    /* display: flex; */
+    display: flex;
     width: 100%;
-    height: 1000px;
+    height: 100vh;
     position: absolute;
     z-index: -1;
-}
+} */
 .logo-nosotros{
     width: 500px;
     height: 500px;
@@ -118,10 +143,33 @@ video{
     font-weight: 500;
 }
 @media screen and (max-width: 650px){
-    .menu{
-        display: none;
+    .cont-menu{
+        width: 100%;
+    }
+    .cont-menu ul{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        height: 70vh;
+    }
+    #inicio #box-text h1{
+        font-size: 32px;
+    }
+    #inicio #box-text h2{
+        font-size: 18px;
+    }
+    .logo-nosotros{
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
     }
     .box-text-nosotros{
-        display: none;
+        width: 70%;
+        margin: 30px 0 0 0;
+    }
+    .box-text-nosotros h2{
+        font-size: 18px;
     }
 }

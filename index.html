@@ -11,31 +11,29 @@
 
 <body>
     <header>
-        <nav class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
-        </nav>
-        <img class="logo" src="./assets/logo3.png" alt="" />
-        <nav class="menu">
-            <a class="contenido" href="">Contenido</a>
-            <a href="">Contacto</a>
-        </nav>
-        <nav class="movil-menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="">Contenido</a>
-            <a href="">Contacto</a>
-        </nav>
+        <div class="icone-menu">
+            <img src="./assets/open-menu2.png" id="icone-menu">
+        </div>
     </header>
+    <div class="cont-menu active" id="menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contenido</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+    <section id="box-video">
+        <video src="/assets/BackgraounVideo.mp4" autoplay="" muted="" loop=""></video>
+    </section>
     <section id="inicio">
-        <video src="/assets/BackgraounVideo.mp4" muted autoplay loop></video>
-        <div class="box-text">
+        <div id="box-text">
             <h1>COMUNICÓLOGOS</h1>
             <h2>Colectivo Juvenil de Comunicaciones</h2>
         </div>
     </section>
     <section id="nosotros">
-        <div class="fondo"></div>
+        <!-- <div class="fondo"></div> -->
         <img class="logo-nosotros" src="./assets/Logo final.svg" alt="">
         <div class="box-text-nosotros">
             <h2>Somos un colectivo juvenil de comunicaciones del municipio de Liborina, creado el 29 de agosto de 2017.</h2>
@@ -52,6 +50,7 @@
         </div>
     </section>
 
+    <script src="./index.js"></script>
 </body>
 
 </html>
